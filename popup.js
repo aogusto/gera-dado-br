@@ -127,9 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyAndShowMessage = async (input, type) => {
         try {
             await copyToClipboard(input.value);
-            showStatusMessage(`${type} copiado!`);
+            showStatusMessage(`${type} copiado! 🎉`);
         } catch (error) {
-            showStatusMessage('Erro ao copiar');
+            showStatusMessage('Erro ao copiar ❌');
         }
     };
 
