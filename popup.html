@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gera Dado Br</title>
+    <style>
+        :root {
+            --color-primary: #3498db;
+            --color-secondary: #2c3e50;
+            color: var(--color-primary);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: fit-content;
+            background-color: black;
+        }
+
+        .container {
+            background-color: #1c1c1c;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .generator-section {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .generator-section:last-child {
+            border-bottom: none;
+        }
+
+        .result-container {
+            display: flex;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+        .copy-btn {
+            background-color: #e7e7e7;
+            border: 1px solid #ddd;
+            border-left: none;
+            border-radius: 0 4px 4px 0;
+            padding: 0 10px;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background-color: #d7d7d7;
+        }
+
+        .format-options {
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .generate-btn {
+            width: 100%;
+            padding: 8px;
+            background-color: #3498db;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .generate-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .status {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 12px;
+            height: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Gera Dado BR</h1>
+
+    <div class="generator-section">
+        <h2>CPF</h2>
+        <div class="result-container">
+            <input type="text" id="cpf-result" readonly>
+            <button id="copy-cpf" class="copy-btn">Copiar</button>
+        </div>
+        <div class="format-options">
+            <label>
+                <input type="checkbox" id="cpf-formatted" checked> Formatado
+            </label>
+        </div>
+        <button id="generate-cpf" class="generate-btn">Gerar CPF</button>
+    </div>
+
+    <div class="generator-section">
+        <h2>CNPJ</h2>
+        <div class="result-container">
+            <input type="text" id="cnpj-result" readonly>
+            <button id="copy-cnpj" class="copy-btn">Copiar</button>
+        </div>
+        <div class="format-options">
+            <label>
+                <input type="checkbox" id="cnpj-formatted" checked> Formatado
+            </label>
+        </div>
+        <button id="generate-cnpj" class="generate-btn">Gerar CNPJ</button>
+    </div>
+
+        <div class="generator-section">
+            <h2>UUID</h2>
+            <div class="result-container">
+                <input type="text" id="uuid-result" readonly>
+                <button id="copy-uuid" class="copy-btn">Copiar</button>
+            </div>
+            <div class="format-options">
+                <label>
+                    <input type="checkbox" id="uuid-uppercase"> Maiúsculas
+                </label>
+            </div>
+            <button id="generate-uuid" class="generate-btn">Gerar UUID</button>
+        </div>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
